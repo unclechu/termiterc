@@ -5,7 +5,9 @@ all: clean
 	(cd ~/.config/termite/ && ln -s "$(PWD)/config-light")
 
 clean:
-	rm -f \
-		~/.config/termite/config \
-		~/.config/termite/config-dark \
-		~/.config/termite/config-light
+	[ -L ~/.config/termite/config -o ! -e ~/.config/termite/config ] && \
+		rm -f ~/.config/termite/config
+	[ -L ~/.config/termite/config-dark -o ! -e ~/.config/termite/config-dark ] && \
+		rm -f ~/.config/termite/config-dark
+	[ -L ~/.config/termite/config-light -o ! -e ~/.config/termite/config-light ] && \
+		rm -f ~/.config/termite/config-light
