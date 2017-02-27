@@ -1,8 +1,8 @@
 all: clean
 	mkdir -p ~/.config/termite/
-	(cd ~/.config/termite/ && ln -s "$(PWD)/config")
-	(cd ~/.config/termite/ && ln -s "$(PWD)/config" config-dark)
-	(cd ~/.config/termite/ && ln -s "$(PWD)/config-light")
+	(cd ~/.config/termite/ && ln -s "$(shell pwd)/config")
+	(cd ~/.config/termite/ && ln -s "$(shell pwd)/config" config-dark)
+	(cd ~/.config/termite/ && ln -s "$(shell pwd)/config-light")
 
 clean:
 	[ -L ~/.config/termite/config -o ! -e ~/.config/termite/config ] && \
