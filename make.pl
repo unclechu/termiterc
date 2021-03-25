@@ -1,4 +1,6 @@
-#!/usr/bin/env perl
+#! /usr/bin/env perl
+# Author: Viacheslav Lotsmanov
+# License: Public Domain https://raw.githubusercontent.com/unclechu/termiterc/master/LICENSE
 use v5.10; use strict; use warnings; use autodie qw(:all);
 die 'unexpected arguments count' if scalar(@ARGV) != 1;
 use Env qw<HOME>;
